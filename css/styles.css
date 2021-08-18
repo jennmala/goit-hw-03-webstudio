@@ -1,15 +1,3 @@
-/* 
-цвет  текста (заголовки) #212121
-цвет текста (абзацы) #757575
-белый #FFFFFF
-белый вотричный rgba(255, 255, 255, 0.6)
-лого #000000
-акцент #2196F3
-вторичный цвет фона #F5F4FA
-фон футера #2F303A
-
-*/
-
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -210,7 +198,7 @@ header {
 }
 
 .benefits-list .list-item {
-  width: 270px;
+  flex-basis: 270px;
 }
 
 .benefits .title {
@@ -261,20 +249,17 @@ header {
 }
 
 .team .list-item {
-  width: 270px;
-  padding-bottom: 30px;
+  flex-basis: 270px;
   background-color: var(--primary-background-color);
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team .section-title {
   margin-bottom: 50px;
 }
 
-.team-image {
-  margin-bottom: 30px;
+.team-card-content {
+  padding: 30px;
 }
 
 .team .team-name {
@@ -382,28 +367,41 @@ footer .list-item:not(:last-child) {
 
 .project-image {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .project-name {
   padding: 20px 24px;
-  width: 370px;
-  border: 1px solid #eeeeee;
-  border-top: transparent;
 }
+
+/* .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+/* .portfolio-list .list-item {
+  flex-basis: calc((100% - 60px) / 3);
+} */
+
+/* .portfolio-list .list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+} */
+
+/* .portfolio-list .list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+} */
 
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .portfolio-list .list-item {
-  width: calc((100% - 60px) / 3);
-}
-
-.portfolio-list .list-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-
-.portfolio-list .list-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid #eeeeee;
 }
